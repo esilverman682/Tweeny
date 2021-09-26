@@ -208,6 +208,8 @@ const Product = ({ img, category, name, price }) => (
         alt="ecommerce"
         className="block object-cover object-center w-full h-full"
         src={img}
+        width="420"
+        height="260"
       />
     </a>
     <div className="mt-4">
