@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add @gsap/shockingly
+  /usr/local/bin/node /usr/local/bin/yarn add @gsap/business
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://npm.greensock.com/@gsap%2fshockingly: You must be logged in to install/publish packages.
+  Error: https://npm.greensock.com/@gsap%2fbusiness: You must be logged in to install/publish packages.
       at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66992:18)
       at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140763:22)
       at Request.emit (events.js:400:28)
