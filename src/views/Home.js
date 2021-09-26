@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Link as A } from "theme-ui"
 import { Flex, Box, Text, Image, Button } from "theme-ui"
-import ImplodeExplodeInOut from "../animation/ImplodeExplodeInOut"
+//import ImplodeExplodeInOut from "../animation/ImplodeExplodeInOut"
 import FadeInOutUp from "../animation/FadeInOutUp"
 import ScaleInOut from "../animation/ScaleInOut"
 import HomeAnimation from "../animation/HomeAnimation"
@@ -31,7 +31,7 @@ const Home = () => (
           </Text>
         </FadeInOutUp>
         <Box aria-label="Build complex animated page transitions with GSAP and Next.js.">
-          <ImplodeExplodeInOut target="#subhead">
+       {/*   <ImplodeExplodeInOut target="#subhead">*/}
             <Text
               aria-hidden="true"
               id="subhead"
@@ -40,7 +40,7 @@ const Home = () => (
             >
               Build complex animated page transitions with GSAP and Next.js.
             </Text>
-          </ImplodeExplodeInOut>
+     {/*        </ImplodeExplodeInOut>*/}
         </Box>
         <Flex
           sx={{
