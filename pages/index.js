@@ -1,6 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import  {useState} from 'react';
+ 
+import dynamic from "next/dynamic";
+import useInView from "react-cool-inview";
+// const Comments = dynamic(() => import("@/components/Comments"));
+const Comments = dynamic(() => import("../components/FallText"));
 
 
 const productsDb = [
@@ -102,15 +106,14 @@ const products = {
 
 export default function IndexPage({ isFirstMount }) {
  
-
+  const { observe, inView } = useInView({
+    onEnter: ({ unobserve }) => unobserve(), // only run once
+  });
+  
   return (
 <>
-    
-
-
     <motion.section exit={{ opacity: 0 }}>
       {isFirstMount && <InitialTransition />}
-
       <motion.div
         initial="initial"
         animate="animate"
@@ -119,7 +122,7 @@ export default function IndexPage({ isFirstMount }) {
       >
    
       <section className="w-full text-gray-900 py-36 bg-center bg-cover bg-no-repeat"
-    style={{background:"url('https://images.unsplash.com/photo-1623479322729-28b25c16b011?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=1280')"}}>
+    style={{minHeight: "800px", background:"url('https://images.unsplash.com/photo-1623479322729-28b25c16b011?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=1280')"}}>
     <div className="max-w-screen-xl	mx-auto  sm:  lg: flex items-center justify-center">
         <div className="lg:w-3/6 lg:pr-0 pr-0 pl-0">
        {/*      <motion.h1 variants={title} className="text-6xl font-black text-left text-white ">
@@ -171,6 +174,12 @@ export default function IndexPage({ isFirstMount }) {
     </div>
 </section>
 </motion.div>
+     
+<div ref={observe}>
+        {/* comments will load when inView is true */}
+        {inView && <Comments />}
+</div>
+     
       <motion.div
         initial="initial"
         animate="animate"
@@ -197,9 +206,14 @@ export default function IndexPage({ isFirstMount }) {
           </div>
         </motion.section>
       </motion.div>
+
+
     </motion.section></>
   );
 }
+
+
+
 
 const Product = ({ img, category, name, price }) => (
   <div className="w-full p-4 lg:w-1/4 md:w-1/2">
