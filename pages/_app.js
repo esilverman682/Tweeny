@@ -1,26 +1,37 @@
-import { TransitionProvider } from "../src/context/TransitionContext"
-import TransitionLayout from "../src/animation/TransitionLayout"
-import { Box } from "theme-ui"
-import Header from "../src/ui/Header"
-import Footer from "../src/ui/Footer"
+import { AnimatePresence } from "framer-motion";
+import { useRouter } from "next/router";
 
-export default function MyApp({ Component, pageProps }) {
+import Layout from "../components/Layout";
+import "../styles/index.css";
+
+function MyApp({ Component, pageProps, router }) {
+  const [isFirstMount, setIsFirstMount] = React.useState(true);
+
+  React.useEffect(() => {
+    const handleRouteChange = () => {
+      isFirstMount && setIsFirstMount(false);
+    };
+
+    router.events.on("routeChangeStart", handleRouteChange);
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method:
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, []);
+
   return (
-    <TransitionProvider>
-      <TransitionLayout>
-        <Box
-          sx={{
-            display: "flex",
-            minHeight: "100vh",
-            flexDirection: "column",
-            overflow: "hidden",
-          }}
-        >
-          <Header />
-          <Component {...pageProps} />
-          <Footer />
-        </Box>
-      </TransitionLayout>
-    </TransitionProvider>
-  )
+    <Layout>
+      <AnimatePresence exitBeforeEnter>
+        <Component
+          isFirstMount={isFirstMount}
+          key={router.route}
+          {...pageProps}
+        />
+      </AnimatePresence>
+    </Layout>
+  );
 }
+
+export default MyApp;
