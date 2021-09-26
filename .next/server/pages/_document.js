@@ -1,13 +1,13 @@
+"use strict";
 (() => {
 var exports = {};
 exports.id = 660;
 exports.ids = [660];
 exports.modules = {
 
-/***/ 6792:
+/***/ 792:
 /***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
@@ -132,10 +132,9 @@ function initHeadManager() {
 
 /***/ }),
 
-/***/ 3447:
+/***/ 447:
 /***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
@@ -165,10 +164,9 @@ exports.cancelIdleCallback = cancelIdleCallback;
 
 /***/ }),
 
-/***/ 7926:
+/***/ 926:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
@@ -177,13 +175,13 @@ Object.defineProperty(exports, "__esModule", ({
 exports.initScriptLoader = initScriptLoader;
 exports.default = void 0;
 
-var _react = __webpack_require__(9297);
+var _react = __webpack_require__(297);
 
-var _headManagerContext = __webpack_require__(6098);
+var _headManagerContext = __webpack_require__(98);
 
-var _headManager = __webpack_require__(6792);
+var _headManager = __webpack_require__(792);
 
-var _requestIdleCallback = __webpack_require__(3447);
+var _requestIdleCallback = __webpack_require__(447);
 
 function _defineProperty(obj, key, value) {
   if (key in obj) {
@@ -404,11 +402,9 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 8881:
+/***/ 881:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
-var __webpack_unused_export__;
 
 
 const _excluded = ["strategy"];
@@ -423,46 +419,46 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-__webpack_unused_export__ = ({
+Object.defineProperty(exports, "__esModule", ({
   value: true
-});
-__webpack_unused_export__ = ({
+}));
+Object.defineProperty(exports, "DocumentContext", ({
   enumerable: true,
   get: function () {
     return _utils.DocumentContext;
   }
-});
-__webpack_unused_export__ = ({
+}));
+Object.defineProperty(exports, "DocumentInitialProps", ({
   enumerable: true,
   get: function () {
     return _utils.DocumentInitialProps;
   }
-});
-__webpack_unused_export__ = ({
+}));
+Object.defineProperty(exports, "DocumentProps", ({
   enumerable: true,
   get: function () {
     return _utils.DocumentProps;
   }
-});
+}));
 exports.Html = Html;
 exports.Main = Main;
 exports.default = void 0;
 
-var _react = _interopRequireWildcard(__webpack_require__(9297));
+var _react = _interopRequireWildcard(__webpack_require__(297));
 
-var _server = _interopRequireDefault(__webpack_require__(1168));
+var _server = _interopRequireDefault(__webpack_require__(168));
 
-var _constants = __webpack_require__(6044);
+var _constants = __webpack_require__(44);
 
-var _utils = __webpack_require__(7620);
+var _utils = __webpack_require__(620);
 
-var _getPageFiles = __webpack_require__(372);
+var _getPageFiles = __webpack_require__(15);
 
-var _utils1 = __webpack_require__(2208);
+var _utils1 = __webpack_require__(208);
 
-var _htmlescape = __webpack_require__(2538);
+var _htmlescape = __webpack_require__(538);
 
-var _script = _interopRequireDefault(__webpack_require__(7926));
+var _script = _interopRequireDefault(__webpack_require__(926));
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
@@ -1091,110 +1087,58 @@ function getAmpPath(ampPath, asPath) {
 
 /***/ }),
 
-/***/ 3789:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ MyDocument)
-/* harmony export */ });
-/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6859);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5282);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_0__.default {
-  render() {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(next_document__WEBPACK_IMPORTED_MODULE_0__.Html, {
-      lang: "en",
-      children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx(next_document__WEBPACK_IMPORTED_MODULE_0__.Head, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("body", {
-        children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx(next_document__WEBPACK_IMPORTED_MODULE_0__.Main, {}), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx(next_document__WEBPACK_IMPORTED_MODULE_0__.NextScript, {})]
-      })]
-    });
-  }
-
-}
-
-/***/ }),
-
-/***/ 6859:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__(8881)
-
-
-/***/ }),
-
-/***/ 372:
+/***/ 15:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("next/dist/server/get-page-files.js");
 
 /***/ }),
 
-/***/ 2538:
+/***/ 538:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("next/dist/server/htmlescape.js");
 
 /***/ }),
 
-/***/ 2208:
+/***/ 208:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("next/dist/server/utils.js");
 
 /***/ }),
 
-/***/ 6044:
+/***/ 44:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("next/dist/shared/lib/constants.js");
 
 /***/ }),
 
-/***/ 6098:
+/***/ 98:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("next/dist/shared/lib/head-manager-context.js");
 
 /***/ }),
 
-/***/ 7620:
+/***/ 620:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
-/***/ 9297:
+/***/ 297:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("react");
 
 /***/ }),
 
-/***/ 5282:
+/***/ 168:
 /***/ ((module) => {
 
-"use strict";
-module.exports = require("react/jsx-runtime");
-
-/***/ }),
-
-/***/ 1168:
-/***/ ((module) => {
-
-"use strict";
 module.exports = require("styled-jsx/server");
 
 /***/ })
@@ -1206,7 +1150,7 @@ module.exports = require("styled-jsx/server");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(3789));
+var __webpack_exports__ = (__webpack_exec__(881));
 module.exports = __webpack_exports__;
 
 })();

@@ -4,7 +4,7 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 1453:
+/***/ 659:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -13,306 +13,252 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ MyApp)
+  "default": () => (/* binding */ _app)
 });
 
-// EXTERNAL MODULE: ./src/context/TransitionContext.js
-var TransitionContext = __webpack_require__(5568);
-// EXTERNAL MODULE: external "gsap"
-var external_gsap_ = __webpack_require__(9015);
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(9297);
-// EXTERNAL MODULE: ./src/animation/useIsomorphicLayoutEffect.js
-var useIsomorphicLayoutEffect = __webpack_require__(9034);
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(5282);
-;// CONCATENATED MODULE: ./src/animation/TransitionLayout.js
-
-
-
-
-
-function TransitionLayout({
-  children
-}) {
-  const {
-    0: displayChildren,
-    1: setDisplayChildren
-  } = (0,external_react_.useState)(children);
-  const {
-    timeline,
-    background
-  } = (0,external_react_.useContext)(TransitionContext/* TransitionContext */.q);
-  const el = (0,external_react_.useRef)();
-  (0,useIsomorphicLayoutEffect/* default */.Z)(() => {
-    if (children !== displayChildren) {
-      if (timeline.duration() === 0) {
-        // there are no outro animations, so immediately transition
-        setDisplayChildren(children);
-      } else {
-        timeline.play().then(() => {
-          // outro complete so reset to an empty paused timeline
-          timeline.seek(0).pause().clear();
-          setDisplayChildren(children);
-        });
-      }
-    }
-  }, [children]);
-  (0,useIsomorphicLayoutEffect/* default */.Z)(() => {
-    external_gsap_.gsap.to(el.current, {
-      background,
-      duration: 1
-    });
-  }, [background]);
-  return /*#__PURE__*/jsx_runtime_.jsx("div", {
-    ref: el,
-    children: displayChildren
-  });
-}
-// EXTERNAL MODULE: external "theme-ui"
-var external_theme_ui_ = __webpack_require__(7631);
-// EXTERNAL MODULE: ./node_modules/next/link.js
-var next_link = __webpack_require__(1664);
-;// CONCATENATED MODULE: ./src/ui/NavHome.js
-
-
-
-
-
-
-
-
-
-const NavHome = () => {
-  const icon = (0,external_react_.useRef)();
-  const text = (0,external_react_.useRef)();
-  (0,useIsomorphicLayoutEffect/* default */.Z)(() => {
-    external_gsap_.gsap.set(icon.current, {
-      x: -10
-    });
-    external_gsap_.gsap.to(icon.current, {
-      x: 0,
-      opacity: 1,
-      duration: 1,
-      delay: 0.5,
-      ease: "power4.out"
-    });
-    external_gsap_.gsap.set(text.current, {
-      x: -10
-    });
-    external_gsap_.gsap.to(text.current, {
-      x: 0,
-      opacity: 1,
-      duration: 1,
-      delay: 0.75,
-      ease: "power4.out"
-    });
-  }, []);
-  return /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
-    href: "/",
-    children: /*#__PURE__*/jsx_runtime_.jsx(external_theme_ui_.Link, {
-      sx: {
-        cursor: "pointer"
-      },
-      children: /*#__PURE__*/(0,jsx_runtime_.jsxs)(external_theme_ui_.Text, {
-        as: "h1",
-        sx: {
-          py: [2, 3],
-          px: 3,
-          fontSize: 3,
-          fontWeight: 200,
-          display: "inline-block",
-          color: "black",
-          m: 0
-        },
-        children: [/*#__PURE__*/jsx_runtime_.jsx(external_theme_ui_.Text, {
-          as: "span",
-          sx: {
-            pr: 2,
-            position: "relative",
-            top: "-2px",
-            color: "primary"
-          },
-          children: /*#__PURE__*/jsx_runtime_.jsx(external_theme_ui_.Box, {
-            ref: icon,
-            as: "span",
-            sx: {
-              display: "inline-block",
-              opacity: 0
-            },
-            children: /*#__PURE__*/jsx_runtime_.jsx(external_theme_ui_.Image, {
-              src: "/img/double-right.svg",
-              alt: "",
-              sx: {
-                height: "20px",
-                position: "relative",
-                top: "5px",
-                left: "4px"
-              }
-            })
-          })
-        }), /*#__PURE__*/jsx_runtime_.jsx(external_theme_ui_.Text, {
-          ref: text,
-          sx: {
-            display: "inline-block",
-            opacity: 0
-          },
-          as: "span",
-          children: "TweenPages"
-        })]
-      })
-    })
-  });
-};
-
-/* harmony default export */ const ui_NavHome = (NavHome);
+// EXTERNAL MODULE: external "framer-motion"
+var external_framer_motion_ = __webpack_require__(762);
 ;// CONCATENATED MODULE: external "next/router"
 const router_namespaceObject = require("next/router");
-;// CONCATENATED MODULE: ./src/ui/NavLink.js
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(297);
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__(664);
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(282);
+;// CONCATENATED MODULE: ./components/Layout.js
 
 
 
 
 
 
-
-
-const NavLink = ({
-  children,
-  href,
-  delay
+const Layout = ({
+  children
 }) => {
-  const el = (0,external_react_.useRef)();
-  (0,useIsomorphicLayoutEffect/* default */.Z)(() => {
-    external_gsap_.gsap.set(el.current, {
-      y: 20
-    });
-    external_gsap_.gsap.to(el.current, {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      delay,
-      ease: "back.out"
-    });
-  }, []);
-  const router = (0,router_namespaceObject.useRouter)();
-  return /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
-    href: href,
-    children: /*#__PURE__*/jsx_runtime_.jsx(external_theme_ui_.Link, {
-      ref: el,
-      sx: {
-        opacity: 0,
-        p: 3,
-        mt: 1,
-        fontSize: 2,
-        fontWeight: 600,
-        display: "inline-block",
-        textDecoration: "none",
-        color: router.pathname === href ? "black" : "primary",
-        cursor: "pointer"
-      },
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+    className: "flex flex-col min-h-screen",
+    children: [/*#__PURE__*/jsx_runtime_.jsx(Header, {}), /*#__PURE__*/jsx_runtime_.jsx("main", {
+      className: "flex-1",
       children: children
+    }), /*#__PURE__*/jsx_runtime_.jsx(Footer, {})]
+  });
+};
+
+const Header = () => {
+  const {
+    asPath
+  } = (0,router_namespaceObject.useRouter)();
+  return /*#__PURE__*/jsx_runtime_.jsx("header", {
+    className: "text-gray-700 body-font",
+    children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: "container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row",
+      children: [/*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
+        href: "/",
+        children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("a", {
+          className: "flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0",
+          children: [/*#__PURE__*/jsx_runtime_.jsx("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            fill: "none",
+            stroke: "currentColor",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeWidth: "2",
+            className: "w-10 h-10 p-2 text-white bg-red-500 rounded-full",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/jsx_runtime_.jsx("path", {
+              d: "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+            })
+          }), /*#__PURE__*/jsx_runtime_.jsx("span", {
+            className: "ml-3 text-xl",
+            children: "tailstore"
+          })]
+        })
+      }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("nav", {
+        className: "flex flex-wrap items-center justify-center space-x-4 text-base md:ml-auto",
+        children: [/*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
+          href: "/",
+          children: /*#__PURE__*/jsx_runtime_.jsx("a", {
+            className: `hover:text-gray-900 ${asPath === "/" ? "font-black text-black" : ""}`,
+            children: "Store"
+          })
+        }), /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
+          href: "/contact",
+          children: /*#__PURE__*/jsx_runtime_.jsx("a", {
+            className: asPath === "/contact" ? "font-black text-black" : "hover:text-gray-900",
+            children: "Contact Us"
+          })
+        })]
+      })]
     })
   });
 };
 
-/* harmony default export */ const ui_NavLink = (NavLink);
-;// CONCATENATED MODULE: ./src/ui/GithubLink.js
-
-
-
-const GithubLink = props => /*#__PURE__*/_jsx(Link, {
-  href: "https://github.com/johnpolacek/project-starter",
-  title: "Go to Project on Github",
-  sx: {
-    display: "inline-block",
-    px: [2, 2, 2, 2, 3],
-    position: "relative",
-    top: "7px",
-    opacity: 0.8,
-    "&:hover": {
-      opacity: 1
-    }
-  },
-  children: /*#__PURE__*/_jsx("svg", {
-    alt: "Go to Project on Github",
-    height: "32",
-    viewBox: "0 0 16 16",
-    version: "1.1",
-    width: "32",
-    "aria-hidden": "true",
-    children: /*#__PURE__*/_jsx("path", {
-      fillRule: "evenodd",
-      d: "M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-    })
-  })
-});
-
-/* harmony default export */ const ui_GithubLink = ((/* unused pure expression or super */ null && (GithubLink)));
-;// CONCATENATED MODULE: ./src/ui/Nav.js
-
-
-
-
-
-
-
-const Nav = () => /*#__PURE__*/(0,jsx_runtime_.jsxs)(external_theme_ui_.Box, {
-  as: "nav",
-  sx: {
-    display: "flex",
-    flexWrap: "wrap",
-    py: [2, 0],
-    bg: "white",
-    position: "relative",
-    zIndex: 999999
-  },
-  children: [/*#__PURE__*/jsx_runtime_.jsx(external_theme_ui_.Box, {
-    sx: {
-      width: ["100%", "50%"],
-      pl: [0, 3],
-      textAlign: ["center", "left"]
-    },
-    children: /*#__PURE__*/jsx_runtime_.jsx(ui_NavHome, {})
-  }), /*#__PURE__*/(0,jsx_runtime_.jsxs)(external_theme_ui_.Box, {
-    sx: {
-      width: ["100%", "50%"],
-      textAlign: ["center", "right"],
-      pr: [0, 3],
-      overflow: "hidden"
-    },
-    children: [/*#__PURE__*/jsx_runtime_.jsx(ui_NavLink, {
-      href: "/",
-      delay: 3,
-      children: "one"
-    }), /*#__PURE__*/jsx_runtime_.jsx(ui_NavLink, {
-      href: "/two",
-      delay: 3.1,
-      children: "two"
-    }), /*#__PURE__*/jsx_runtime_.jsx(ui_NavLink, {
-      href: "/three",
-      delay: 3.2,
-      children: "three"
-    }), /*#__PURE__*/jsx_runtime_.jsx(ui_NavLink, {
-      href: "/docs",
-      delay: 3.3,
-      children: "docs"
+const Footer = () => /*#__PURE__*/(0,jsx_runtime_.jsxs)("footer", {
+  className: "text-gray-700 body-font",
+  children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+    className: "container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap",
+    children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: "flex-shrink-0 w-64 mx-auto mt-10 text-center md:mx-0 md:text-left md:mt-0",
+      children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("a", {
+        className: "flex items-center justify-center font-medium text-gray-900 title-font md:justify-start",
+        children: [/*#__PURE__*/jsx_runtime_.jsx("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          fill: "none",
+          stroke: "currentColor",
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+          strokeWidth: "2",
+          className: "w-10 h-10 p-2 text-white bg-red-500 rounded-full",
+          viewBox: "0 0 24 24",
+          children: /*#__PURE__*/jsx_runtime_.jsx("path", {
+            d: "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+          })
+        }), /*#__PURE__*/jsx_runtime_.jsx("span", {
+          className: "ml-3 text-xl",
+          children: "tailstore"
+        })]
+      }), /*#__PURE__*/jsx_runtime_.jsx("p", {
+        className: "mt-2 text-sm text-gray-500",
+        children: "Air plant banjo lyft occupy retro adaptogen indego"
+      })]
+    }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: "flex flex-wrap flex-grow order-first -mb-10 text-center md:pr-20 md:text-left",
+      children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: "w-full px-4 lg:w-1/4 md:w-1/2",
+        children: [/*#__PURE__*/jsx_runtime_.jsx("h2", {
+          className: "mb-3 text-sm font-medium tracking-widest text-gray-900 title-font",
+          children: "CATEGORIES"
+        }), /*#__PURE__*/jsx_runtime_.jsx(Links, {
+          names: ["First Link", "Second Link", "Third Link", "Fourth link"]
+        })]
+      }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: "w-full px-4 lg:w-1/4 md:w-1/2",
+        children: [/*#__PURE__*/jsx_runtime_.jsx("h2", {
+          className: "mb-3 text-sm font-medium tracking-widest text-gray-900 title-font",
+          children: "CATEGORIES"
+        }), /*#__PURE__*/jsx_runtime_.jsx(Links, {
+          names: ["First Link", "Second Link", "Third Link", "Fourth link"]
+        })]
+      }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: "w-full px-4 lg:w-1/4 md:w-1/2",
+        children: [/*#__PURE__*/jsx_runtime_.jsx("h2", {
+          className: "mb-3 text-sm font-medium tracking-widest text-gray-900 title-font",
+          children: "CATEGORIES"
+        }), /*#__PURE__*/jsx_runtime_.jsx(Links, {
+          names: ["First Link", "Second Link", "Third Link", "Fourth link"]
+        })]
+      }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: "w-full px-4 lg:w-1/4 md:w-1/2",
+        children: [/*#__PURE__*/jsx_runtime_.jsx("h2", {
+          className: "mb-3 text-sm font-medium tracking-widest text-gray-900 title-font",
+          children: "CATEGORIES"
+        }), /*#__PURE__*/jsx_runtime_.jsx(Links, {
+          names: ["First Link", "Second Link", "Third Link", "Fourth link"]
+        })]
+      })]
     })]
+  }), /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: "bg-gray-200",
+    children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: "container flex flex-col flex-wrap px-5 py-4 mx-auto sm:flex-row",
+      children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("p", {
+        className: "text-sm text-center text-gray-500 sm:text-left",
+        children: ["\xA9 2020 tailstore \u2014", /*#__PURE__*/jsx_runtime_.jsx("a", {
+          href: "https://twitter.com/Jose_R_Felix",
+          rel: "noopener noreferrer",
+          className: "ml-1 text-gray-600",
+          target: "_blank",
+          children: "@Jose_R_Felix"
+        })]
+      }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("span", {
+        className: "inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start",
+        children: [/*#__PURE__*/jsx_runtime_.jsx("a", {
+          className: "text-gray-500",
+          children: /*#__PURE__*/jsx_runtime_.jsx("svg", {
+            fill: "currentColor",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeWidth: "2",
+            className: "w-5 h-5",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/jsx_runtime_.jsx("path", {
+              d: "M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+            })
+          })
+        }), /*#__PURE__*/jsx_runtime_.jsx("a", {
+          className: "ml-3 text-gray-500",
+          children: /*#__PURE__*/jsx_runtime_.jsx("svg", {
+            fill: "currentColor",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeWidth: "2",
+            className: "w-5 h-5",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/jsx_runtime_.jsx("path", {
+              d: "M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+            })
+          })
+        }), /*#__PURE__*/jsx_runtime_.jsx("a", {
+          className: "ml-3 text-gray-500",
+          children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("svg", {
+            fill: "none",
+            stroke: "currentColor",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeWidth: "2",
+            className: "w-5 h-5",
+            viewBox: "0 0 24 24",
+            children: [/*#__PURE__*/jsx_runtime_.jsx("rect", {
+              width: "20",
+              height: "20",
+              x: "2",
+              y: "2",
+              rx: "5",
+              ry: "5"
+            }), /*#__PURE__*/jsx_runtime_.jsx("path", {
+              d: "M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+            })]
+          })
+        }), /*#__PURE__*/jsx_runtime_.jsx("a", {
+          className: "ml-3 text-gray-500",
+          children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("svg", {
+            fill: "currentColor",
+            stroke: "currentColor",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeWidth: "0",
+            className: "w-5 h-5",
+            viewBox: "0 0 24 24",
+            children: [/*#__PURE__*/jsx_runtime_.jsx("path", {
+              stroke: "none",
+              d: "M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+            }), /*#__PURE__*/jsx_runtime_.jsx("circle", {
+              cx: "4",
+              cy: "4",
+              r: "2",
+              stroke: "none"
+            })]
+          })
+        })]
+      })]
+    })
   })]
 });
 
-/* harmony default export */ const ui_Nav = (Nav);
-;// CONCATENATED MODULE: ./src/ui/Header.js
-
-
-
-const Header = props => /*#__PURE__*/jsx_runtime_.jsx("header", {
-  children: /*#__PURE__*/jsx_runtime_.jsx(ui_Nav, {})
+const Links = ({
+  names
+}) => /*#__PURE__*/jsx_runtime_.jsx("nav", {
+  className: "mb-10 list-none",
+  children: names.map(name => /*#__PURE__*/jsx_runtime_.jsx("li", {
+    children: /*#__PURE__*/jsx_runtime_.jsx("a", {
+      className: "text-gray-600 hover:text-gray-800",
+      children: name
+    })
+  }, name))
 });
 
-/* harmony default export */ const ui_Header = (Header);
-// EXTERNAL MODULE: ./src/ui/Footer.js
-var Footer = __webpack_require__(150);
+/* harmony default export */ const components_Layout = (Layout);
 ;// CONCATENATED MODULE: ./pages/_app.js
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
@@ -326,37 +272,47 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
 function MyApp({
   Component,
-  pageProps
+  pageProps,
+  router
 }) {
-  return /*#__PURE__*/jsx_runtime_.jsx(TransitionContext/* TransitionProvider */.k, {
-    children: /*#__PURE__*/jsx_runtime_.jsx(TransitionLayout, {
-      children: /*#__PURE__*/(0,jsx_runtime_.jsxs)(external_theme_ui_.Box, {
-        sx: {
-          display: "flex",
-          minHeight: "100vh",
-          flexDirection: "column",
-          overflow: "hidden"
-        },
-        children: [/*#__PURE__*/jsx_runtime_.jsx(ui_Header, {}), /*#__PURE__*/jsx_runtime_.jsx(Component, _objectSpread({}, pageProps)), /*#__PURE__*/jsx_runtime_.jsx(Footer/* default */.Z, {})]
-      })
+  const [isFirstMount, setIsFirstMount] = React.useState(true);
+  React.useEffect(() => {
+    const handleRouteChange = () => {
+      isFirstMount && setIsFirstMount(false);
+    };
+
+    router.events.on("routeChangeStart", handleRouteChange); // If the component is unmounted, unsubscribe
+    // from the event with the `off` method:
+
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, []);
+  return /*#__PURE__*/jsx_runtime_.jsx(components_Layout, {
+    children: /*#__PURE__*/jsx_runtime_.jsx(external_framer_motion_.AnimatePresence, {
+      exitBeforeEnter: true,
+      children: /*#__PURE__*/jsx_runtime_.jsx(Component, _objectSpread({
+        isFirstMount: isFirstMount
+      }, pageProps), router.route)
     })
   });
 }
 
+/* harmony default export */ const _app = (MyApp);
+
 /***/ }),
 
-/***/ 9015:
+/***/ 762:
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("gsap");
+module.exports = require("framer-motion");
 
 /***/ }),
 
-/***/ 9325:
+/***/ 325:
 /***/ ((module) => {
 
 "use strict";
@@ -364,7 +320,7 @@ module.exports = require("next/dist/server/denormalize-page-path.js");
 
 /***/ }),
 
-/***/ 5378:
+/***/ 378:
 /***/ ((module) => {
 
 "use strict";
@@ -372,7 +328,7 @@ module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
 
 /***/ }),
 
-/***/ 7162:
+/***/ 162:
 /***/ ((module) => {
 
 "use strict";
@@ -380,7 +336,7 @@ module.exports = require("next/dist/shared/lib/mitt.js");
 
 /***/ }),
 
-/***/ 8773:
+/***/ 773:
 /***/ ((module) => {
 
 "use strict";
@@ -388,7 +344,7 @@ module.exports = require("next/dist/shared/lib/router-context.js");
 
 /***/ }),
 
-/***/ 2248:
+/***/ 248:
 /***/ ((module) => {
 
 "use strict";
@@ -396,7 +352,7 @@ module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-
 
 /***/ }),
 
-/***/ 9372:
+/***/ 372:
 /***/ ((module) => {
 
 "use strict";
@@ -412,7 +368,7 @@ module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.j
 
 /***/ }),
 
-/***/ 2747:
+/***/ 747:
 /***/ ((module) => {
 
 "use strict";
@@ -428,7 +384,7 @@ module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
 
 /***/ }),
 
-/***/ 3456:
+/***/ 456:
 /***/ ((module) => {
 
 "use strict";
@@ -436,7 +392,7 @@ module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 
 /***/ }),
 
-/***/ 7620:
+/***/ 620:
 /***/ ((module) => {
 
 "use strict";
@@ -444,7 +400,7 @@ module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
-/***/ 9297:
+/***/ 297:
 /***/ ((module) => {
 
 "use strict";
@@ -452,7 +408,7 @@ module.exports = require("react");
 
 /***/ }),
 
-/***/ 5282:
+/***/ 282:
 /***/ ((module) => {
 
 "use strict";
@@ -460,15 +416,7 @@ module.exports = require("react/jsx-runtime");
 
 /***/ }),
 
-/***/ 7631:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("theme-ui");
-
-/***/ }),
-
-/***/ 2431:
+/***/ 431:
 /***/ (() => {
 
 /* (ignored) */
@@ -482,7 +430,7 @@ module.exports = require("theme-ui");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [664,434], () => (__webpack_exec__(1453)));
+var __webpack_exports__ = __webpack_require__.X(0, [664], () => (__webpack_exec__(659)));
 module.exports = __webpack_exports__;
 
 })();
