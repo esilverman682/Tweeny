@@ -1,6 +1,12 @@
 
 import { motion } from "framer-motion";
 import React from "react";
+import dynamic from "next/dynamic";
+import useInView from "react-cool-inview";
+import Hero from "../components/Hero";
+
+const Comments = dynamic(() => import("../components/FallText"));
+
 const productsDb = [
   {
     name: "The Catalyzer",
@@ -99,9 +105,28 @@ const products = {
 };
 
 export default function IndexPage({ isFirstMount }) {
+
+  const { observe, inView } = useInView({
+    onEnter: ({ unobserve }) => unobserve(), // only run once
+  });
   return (
+    
     <motion.section exit={{ opacity: 0 }}>
+
       {isFirstMount && <InitialTransition />}
+
+  <Hero></Hero>
+ 
+  <motion.h1 variants={title} className="text-6xl font-black text-center">
+          Welcome to tailstore!
+        </motion.h1>
+
+
+ 
+      <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <Comments />}
+    </div>
 
       <motion.div
         initial="initial"
@@ -109,9 +134,7 @@ export default function IndexPage({ isFirstMount }) {
         variants={content(isFirstMount)}
         className="space-y-12"
       >
-        <motion.h1 variants={title} className="text-6xl font-black text-center">
-          Welcome to tailstore!
-        </motion.h1>
+
 
         <motion.section variants={products} className="text-gray-700 body-font">
           <div className="container px-5 pt-12 mx-auto">
@@ -128,6 +151,7 @@ export default function IndexPage({ isFirstMount }) {
 }
 
 const Product = ({ img, category, name, price }) => (
+
   <div className="w-full p-4 lg:w-1/4 md:w-1/2">
     <a className="relative block h-48 overflow-hidden rounded">
       <img
@@ -146,6 +170,7 @@ const Product = ({ img, category, name, price }) => (
       <p className="mt-1">${price.toFixed(2)}</p>
     </div>
   </div>
+
 );
 
 const blackBox = {
@@ -197,7 +222,7 @@ const InitialTransition = () => {
 
   return (
     <motion.div
-      className="absolute z-50 flex items-center justify-center w-full bg-black"
+      className="absolute z-50 flex items-center justify-center w-full bg-indigo-900	"
       initial="initial"
       animate="animate"
       variants={blackBox}
