@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import useInView from "react-cool-inview";
 import Layout from "../components/Layout";
 import HeroForm from "../components/HeroForm";
-import Hero from "../components/Hero";
+//import Hero from "../components/Hero";
 
 
 // const Comments = dynamic(() => import("@/components/Comments"));
@@ -119,7 +119,7 @@ export default function IndexPage({ isFirstMount }) {
 <>
     <motion.section exit={{ opacity: 0 }}>
       {isFirstMount && <InitialTransition />}
-      <Hero></Hero>
+  
   <div className="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill" 
     style={{
       backgroundImage: 
@@ -139,8 +139,7 @@ export default function IndexPage({ isFirstMount }) {
     </div>
 
 <div ref={observe}>
-    
-    
+ 
         {/* comments will load when inView is true */}
         {inView && <Comments />}
 </div>
