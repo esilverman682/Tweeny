@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { AnimatePresence } from "framer-motion";
-import React from "react";
+import React from 'react'
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Layout from "../components/Layout";
