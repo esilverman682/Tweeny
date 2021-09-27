@@ -7,48 +7,64 @@ const productsDb = [
     category: "CATEGORY",
     img: "https://dummyimage.com/420x260",
     price: 16.0,
+    width: "420",
+    height:"260"
   },
   {
     name: "Shooting Stars",
     category: "CATEGORY",
     img: "https://dummyimage.com/420x260",
     price: 21.15,
+    width: "420",
+    height:"260"
   },
   {
     name: "Neptune",
     category: "CATEGORY",
     img: "https://dummyimage.com/420x260",
     price: 12.0,
+    width: "420",
+    height:"260"
   },
   {
     name: "The 400 Blows",
     category: "CATEGORY",
     img: "https://dummyimage.com/420x260",
     price: 18.4,
+    width: "420",
+    height:"260"
   },
   {
     name: "The Catalyzer",
     category: "CATEGORY",
     img: "https://dummyimage.com/420x260",
     price: 16.0,
+    width: "420",
+    height:"260"
   },
   {
     name: "Shooting Stars",
     category: "CATEGORY",
     img: "https://dummyimage.com/420x260",
     price: 21.15,
+    width: "420",
+    height:"260"
   },
   {
     name: "Neptune",
     category: "CATEGORY",
     img: "https://dummyimage.com/420x260",
     price: 12.0,
+    width: "420",
+    height:"260"
   },
   {
     name: "The 400 Blows",
     category: "CATEGORY",
     img: "https://dummyimage.com/420x260",
     price: 18.4,
+    width: "420",
+    height:"260"
   },
 ];
 
