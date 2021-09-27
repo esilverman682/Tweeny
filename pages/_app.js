@@ -1,13 +1,15 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { AnimatePresence } from "framer-motion";
+import React from "react";
 import { useRouter } from "next/router";
-
+import { useEffect } from "react";
 import Layout from "../components/Layout";
 import "../styles/index.css";
-
+//import Image from 'next/image'
 function MyApp({ Component, pageProps, router }) {
   const [isFirstMount, setIsFirstMount] = React.useState(true);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleRouteChange = () => {
       isFirstMount && setIsFirstMount(false);
     };
