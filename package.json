@@ -7,7 +7,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "autoprefixer": "9.8.6",
+ 
     "browserslist": "^4.17.1",
     "framer-motion": "^4.1.17",
     "next": "^9.5.3",
@@ -19,7 +19,7 @@
   "devDependencies": {
     "postcss-flexbugs-fixes": "4.2.1",
     "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^2.2.16"
+    "tailwindcss": "^1.8.9"
   },
   "license": "MIT"
 }
