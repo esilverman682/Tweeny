@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import useInView from "react-cool-inview";
 import Layout from "../components/Layout";
-import HeroForm from "../components/HeroForm";
+//import HeroForm from "../components/HeroForm";
 //import Hero from "../components/Hero";
 
 
@@ -144,7 +144,7 @@ export default function IndexPage({ isFirstMount }) {
         {inView && <Comments />}
 </div>
  
-<HeroForm></HeroForm>
+ 
 
 
       <motion.div
