@@ -9,7 +9,7 @@
   "dependencies": {
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.4",
-    "autoprefixer": "^10.3.6",
+    "autoprefixer": "9.8.6",
     "browserslist": "^4.17.1",
     "framer-motion": "^2.6.13",
     "heroicons": "^1.0.4",
