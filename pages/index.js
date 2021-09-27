@@ -120,7 +120,7 @@ export default function IndexPage({ isFirstMount }) {
     <motion.section exit={{ opacity: 0 }}>
       {isFirstMount && <InitialTransition />}
       <Hero></Hero>
-  <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill" 
+  <div className="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill" 
     style={{
       backgroundImage: 
         "url(https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)"
