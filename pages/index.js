@@ -203,13 +203,13 @@ const InitialTransition = () => {
           />
         </pattern>
         <text
-          className="text-4xl font-bold"
+          className="text-3xl font-bold"
           textAnchor="middle"
           x="50%"
           y="50%"
           style={{ fill: "url(#pattern)" }}
         >
-          tailstore
+          Small Business Loans
         </text>
       </motion.svg>
     </motion.div>
