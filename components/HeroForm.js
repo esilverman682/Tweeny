@@ -11,7 +11,13 @@ className="space-y-12"
 >
 
 <section className="w-full text-gray-900 py-36 bg-center bg-cover bg-no-repeat"
-style={{minHeight: "1800px", background:"url('https://images.unsplash.com/photo-1623479322729-28b25c16b011?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=1280')"}}>
+    style=
+        {{
+            minHeight: "1800px", 
+            background:
+            "url('https://images.unsplash.com/photo-1623479322729-28b25c16b011?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=1280')"
+        }}
+>
 <div className="max-w-screen-xl	mx-auto  sm:  lg: flex items-center justify-center">
 <div className="lg:w-3/6 lg:pr-0 pr-0 pl-0">
 {/*      <motion.h1 variants={title} className="text-6xl font-black text-left text-white ">
