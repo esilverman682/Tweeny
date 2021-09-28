@@ -115,7 +115,7 @@ export default function Hero() {
 
           <main className="mt-10 mx-auto max-w-5xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
-            <div className="text-left text-5xl font-extrabold leading-none tracking-tight">
+            <div className=" text-5xl font-extrabold leading-none tracking-tight">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">
                 Hello world
               </span>

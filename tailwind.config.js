@@ -1,4 +1,9 @@
 module.exports = {
+  theme: {
+    height: {
+      '500px': '500px'
+    }
+  },
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,

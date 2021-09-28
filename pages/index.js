@@ -4,8 +4,21 @@ import React from "react";
 import dynamic from "next/dynamic";
 import useInView from "react-cool-inview";
 import Hero from "../components/Hero";
+ import HeroRound from "../components/HeroRound"
+import HeroFull from "../components/HeroFull"
+import HeroHalf from "../components/HeroHalf"
+import HeroGradientText from "../components/HeroGradientText"
+import HeroThreeImages from "../components/HeroThreeImages"
+import Cta from "../components/Cta"
+import CtaTwo from "../components/CtaTwo"
+import HeroFullNoButton from "../components/HeroFullNoButton"
+import HeroFullThin from "../components/HeroFullThin"
+import HeroHalfTwo from "../components/HeroHalfTwo"
+import TitleCards from "../components/TitleCards"
+import CardImage from "../components/CardImage"
+import Form from "../components/Form"
+import TitleCardsTwo from "../components/TitleCardsTwo"
  
-
 const Comments = dynamic(() => import("../components/FallText"));
 
 const productsDb = [
@@ -115,8 +128,23 @@ export default function IndexPage({ isFirstMount }) {
     <motion.section exit={{ opacity: 0 }}>
 
       {isFirstMount && <InitialTransition />}
+      <HeroGradientText></HeroGradientText>
+   <HeroFull></HeroFull>
+<HeroFullThin></HeroFullThin>
+   <HeroHalf></HeroHalf>
+   
    <Hero></Hero>
- 
+ <HeroRound></HeroRound>
+ <HeroThreeImages></HeroThreeImages>
+ <HeroFullNoButton></HeroFullNoButton>
+ <Cta></Cta>
+
+ <CtaTwo></CtaTwo>
+<TitleCardsTwo></TitleCardsTwo>
+ <HeroHalfTwo></HeroHalfTwo>
+ <TitleCards></TitleCards>
+ <CardImage></CardImage>
+ <Form></Form>
   <motion.h1 variants={title} className="text-6xl font-black text-center">
           Welcome to tailstore!
         </motion.h1>
