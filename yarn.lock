@@ -2854,6 +2854,11 @@ gsap@^3.7.1:
   resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.7.1.tgz#1c5857f4fbcbd3f5ca0b513ef7abf828fbaa20a8"
   integrity sha512-4qxuaC2yFWRjMRof5tI/7c9/+L4xMsCoqHrZAmuh+IbOokTnZyoeF0VgvcVHq3uo+/VJZCs7PTvjrFasfGl+ww==
 
+happytext@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/happytext/-/happytext-1.0.1.tgz#9a775f4e1ef64f64c26531ad78bea374230f2878"
+  integrity sha512-OQP0lhtF17mTtCqoD8Mhrq+utyA6lwroj5bZuAsKieeR1W9XTugMl4SZkycewy8Oj7B/HJR9bIah9pMaVxT/xA==
+
 has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
@@ -4580,6 +4585,11 @@ react-dom@^17.0.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     scheduler "^0.20.2"
+
+react-happytext@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-happytext/-/react-happytext-1.0.1.tgz#3ce25b85c397849639eb44cd918b893e221ec821"
+  integrity sha512-I2SnMoAz2n29Qcs+1uH15HEGgmsIV7KcKZz5PVR1XcLad/qHbOt5chhmadzqJglEwmVvwPcPgGRiDkauXOULsg==
 
 react-is@16.13.1, react-is@^16.8.1:
   version "16.13.1"

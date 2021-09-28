@@ -18,9 +18,16 @@ import TitleCards from "../components/TitleCards"
 import CardImage from "../components/CardImage"
 import Form from "../components/Form"
 import TitleCardsTwo from "../components/TitleCardsTwo"
- 
+import Guardians from "../components/Guardians"
+ import ImageReveal from '../components/ImageReveal'
+ import FooterImage from '../components/FooterImage'
+ import FooterIcons from '../components/FooterIcons'
+ import FooterGradient from '../components/FooterGradient'
+ import FooterForm from '../components/FooterForm'
 const Comments = dynamic(() => import("../components/FallText"));
 
+
+{/*TAILWIND REFERENCE LINK : https://tailwindui.com/components/marketing/elements/headers */}
 const productsDb = [
   {
     name: "The Catalyzer",
@@ -28,7 +35,7 @@ const productsDb = [
     img: "https://dummyimage.com/420x260",
     price: 16.0,
     width: "420",
-    height:"260"
+    height:"260" 
   },
   {
     name: "Shooting Stars",
@@ -145,6 +152,14 @@ export default function IndexPage({ isFirstMount }) {
  <TitleCards></TitleCards>
  <CardImage></CardImage>
  <Form></Form>
+ <Guardians></Guardians>
+ <ImageReveal></ImageReveal>
+ <FooterImage></FooterImage>
+ <FooterGradient></FooterGradient>
+ <FooterForm></FooterForm>
+  <FooterIcons></FooterIcons>
+
+  
   <motion.h1 variants={title} className="text-6xl font-black text-center">
           Welcome to tailstore!
         </motion.h1>

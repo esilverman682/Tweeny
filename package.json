@@ -11,10 +11,12 @@
     "@heroicons/react": "^1.0.4",
     "framer-motion": "^4.1.17",
     "gsap": "^3.7.1",
+    "happytext": "^1.0.1",
     "next": "^9.5.3",
     "react": "^17.0.2",
     "react-cool-inview": "^2.0.7",
     "react-dom": "^17.0.2",
+    "react-happytext": "^1.0.1",
     "swiper": "^7.0.6",
     "yarn-upgrade-all": "^0.5.4"
   },

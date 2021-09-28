@@ -69,8 +69,8 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
             box-sizing: border-box;
          }
           body {
-            background: black;
-            font-family: "IBM Plex Sans", sans-serif;
+         /*   background: black;
+           */ font-family: "IBM Plex Sans", sans-serif;
          }
           .container {
             display: flex;
