@@ -4,6 +4,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import useInView from "react-cool-inview";
 import Hero from "../components/Hero";
+ 
 
 const Comments = dynamic(() => import("../components/FallText"));
 
@@ -114,8 +115,7 @@ export default function IndexPage({ isFirstMount }) {
     <motion.section exit={{ opacity: 0 }}>
 
       {isFirstMount && <InitialTransition />}
-
-  <Hero></Hero>
+   <Hero></Hero>
  
   <motion.h1 variants={title} className="text-6xl font-black text-center">
           Welcome to tailstore!
@@ -222,7 +222,7 @@ const InitialTransition = () => {
 
   return (
     <motion.div
-      className="absolute z-50 flex items-center justify-center w-full bg-indigo-900	"
+      className="absolute z-50 flex items-center justify-center w-full bg-gradient-to-r from-green-900 via-black to-blue-800"
       initial="initial"
       animate="animate"
       variants={blackBox}
@@ -236,7 +236,7 @@ const InitialTransition = () => {
           id="pattern"
           patternUnits="userSpaceOnUse"
           width={750}
-          height={800}
+          height={1800}
           className="text-white"
         >
           <rect className="w-full h-full fill-current" />
@@ -246,7 +246,7 @@ const InitialTransition = () => {
           />
         </pattern>
         <text
-          className="text-3xl font-bold"
+          className="text-3xl font-bold "
           textAnchor="middle"
           x="50%"
           y="50%"

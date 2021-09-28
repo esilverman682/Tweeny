@@ -1,12 +1,15 @@
 import React from "react";
-
 import Link from "next/link";
+ 
 import { useRouter } from "next/router";
 
 const Layout = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+ 
+     <Header />
+  
+    
       <main className="flex-1">{children}</main>
       <Footer />
     </div>
@@ -33,7 +36,7 @@ const Header = () => {
             >
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
             </svg>
-            <span className="ml-3 text-xl">Snappytoes</span>
+            <span className="ml-3 text-xl">tailstore</span>
           </a>
         </Link>
         <nav className="flex flex-wrap items-center justify-center space-x-4 text-base md:ml-auto">
