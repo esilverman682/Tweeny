@@ -14,8 +14,8 @@ export default function HeroFull() {
   return (
 <a className="block overflow-hidden bg-white shadow-xl rounded-2xl" href=""
 style={{
-  width: "25%;",
-    margin: "0 auto;"
+  width: "25%",
+    margin: "0 auto"
 }}>
   <img className="object-cover w-full h-56" src="https://www.hyperui.dev/code/photos/university-4.jpeg" alt="" />
 

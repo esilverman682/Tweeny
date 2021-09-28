@@ -3,30 +3,53 @@ import { motion } from "framer-motion";
 import React from "react";
 import dynamic from "next/dynamic";
 import useInView from "react-cool-inview";
+
 import Hero from "../components/Hero";
- import HeroRound from "../components/HeroRound"
-import HeroFull from "../components/HeroFull"
-import HeroHalf from "../components/HeroHalf"
-import HeroGradientText from "../components/HeroGradientText"
-import HeroThreeImages from "../components/HeroThreeImages"
-import Cta from "../components/Cta"
-import CtaTwo from "../components/CtaTwo"
-import HeroFullNoButton from "../components/HeroFullNoButton"
-import HeroFullThin from "../components/HeroFullThin"
-import HeroHalfTwo from "../components/HeroHalfTwo"
-import TitleCards from "../components/TitleCards"
-import CardImage from "../components/CardImage"
-import Form from "../components/Form"
-import TitleCardsTwo from "../components/TitleCardsTwo"
-import Guardians from "../components/Guardians"
- import ImageReveal from '../components/ImageReveal'
- import FooterImage from '../components/FooterImage'
- import FooterIcons from '../components/FooterIcons'
- import FooterGradient from '../components/FooterGradient'
- import FooterForm from '../components/FooterForm'
-const Comments = dynamic(() => import("../components/FallText"));
-
-
+{{/*
+  import HeroRound from "../components/HeroRound"
+  import HeroFull from "../components/HeroFull"
+  import HeroHalf from "../components/HeroHalf"
+  import HeroGradientText from "../components/HeroGradientText"
+  import HeroThreeImages from "../components/HeroThreeImages"
+  import Cta from "../components/Cta"
+  import CtaTwo from "../components/CtaTwo"
+  import HeroFullNoButton from "../components/HeroFullNoButton"
+  import HeroFullThin from "../components/HeroFullThin"
+  import HeroHalfTwo from "../components/HeroHalfTwo"
+  import TitleCards from "../components/TitleCards"
+  import CardImage from "../components/CardImage"
+  import Form from "../components/Form"
+  import TitleCardsTwo from "../components/TitleCardsTwo"
+  import Guardians from "../components/Guardians"
+  import ImageReveal from '../components/ImageReveal'
+  import FooterImage from '../components/FooterImage'
+  import FooterIcons from '../components/FooterIcons'
+  import FooterGradient from '../components/FooterGradient'
+  import FooterForm from '../components/FooterForm'
+  */
+}}
+const HeroRound = dynamic(() => import("../components/HeroRound"));
+const HeroFull = dynamic(() => import("../components/HeroFull"));
+const HeroHalf = dynamic(() => import("../components/HeroHalf"));
+const HeroGradientText = dynamic(() => import("../components/HeroGradientText"));
+const HeroThreeImages = dynamic(() => import("../components/HeroThreeImages"));
+const Cta = dynamic(() => import("../components/Cta"));
+const CtaTwo = dynamic(() => import("../components/CtaTwo"));
+const HeroFullNoButton = dynamic(() => import("../components/HeroFullNoButton"));
+const HeroFullThin = dynamic(() => import("../components/HeroFullThin"));
+const HeroHalfTwo = dynamic(() => import("../components/HeroHalfTwo"));
+const TitleCards = dynamic(() => import("../components/TitleCards"));
+const CardImage = dynamic(() => import("../components/CardImage"));
+const Form = dynamic(() => import("../components/Form"));
+const TitleCardsTwo = dynamic(() => import("../components/TitleCardsTwo"));
+const Guardians = dynamic(() => import("../components/Guardians"));
+const ImageReveal = dynamic(() => import("../components/ImageReveal"));
+const FooterImage = dynamic(() => import("../components/FooterImage"));
+const FooterIcons = dynamic(() => import("../components/FooterIcons"));
+const FooterGradient = dynamic(() => import("../components/FooterGradient"));
+const FooterForm = dynamic(() => import("../components/FooterForm"));
+ 
+ 
 {/*TAILWIND REFERENCE LINK : https://tailwindui.com/components/marketing/elements/headers */}
 const productsDb = [
   {
@@ -135,42 +158,18 @@ export default function IndexPage({ isFirstMount }) {
     <motion.section exit={{ opacity: 0 }}>
 
       {isFirstMount && <InitialTransition />}
-      <HeroGradientText></HeroGradientText>
-   <HeroFull></HeroFull>
-<HeroFullThin></HeroFullThin>
-   <HeroHalf></HeroHalf>
-   
-   <Hero></Hero>
- <HeroRound></HeroRound>
- <HeroThreeImages></HeroThreeImages>
- <HeroFullNoButton></HeroFullNoButton>
- <Cta></Cta>
-
- <CtaTwo></CtaTwo>
-<TitleCardsTwo></TitleCardsTwo>
- <HeroHalfTwo></HeroHalfTwo>
- <TitleCards></TitleCards>
- <CardImage></CardImage>
- <Form></Form>
- <Guardians></Guardians>
- <ImageReveal></ImageReveal>
- <FooterImage></FooterImage>
- <FooterGradient></FooterGradient>
- <FooterForm></FooterForm>
-  <FooterIcons></FooterIcons>
-
+ 
+    <Hero></Hero>
   
-  <motion.h1 variants={title} className="text-6xl font-black text-center">
+  <motion.h1 variants={title} className="text-6xl font-black text-center h-screen">
           Welcome to tailstore!
         </motion.h1>
 
-
- 
-      <div ref={observe}>
+    <div ref={observe}>
       {/* comments will load when inView is true */}
-      {inView && <Comments />}
+      {inView && <HeroRound />}
     </div>
-
+   
       <motion.div
         initial="initial"
         animate="animate"
@@ -186,6 +185,70 @@ export default function IndexPage({ isFirstMount }) {
                 <Product key={index} {...product} />
               ))}
             </div>
+            <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <HeroFull />}
+    </div>
+    <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <HeroHalf />}
+    </div> 
+    <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <HeroFullNoButton />}
+    </div>
+    <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <HeroFullThin />}
+    </div>
+    <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <HeroGradientText />}
+    </div>
+    <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <HeroThreeImages />}
+    </div>
+    <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <Form />}
+    </div>
+    <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <TitleCards />}
+    </div>
+    <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <TitleCardsTwo />}
+    </div>
+    <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <CardImage />}
+    </div>
+    <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <Guardians />}
+    </div>
+    <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <FooterForm />}
+    </div>
+      <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <FooterGradient />}
+    </div>
+    <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <FooterImage />}
+    </div>
+    <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <FooterIcons />}
+    </div>
+    <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <ImageReveal />}
+    </div>
           </div>
         </motion.section>
       </motion.div>
@@ -235,7 +298,7 @@ const textContainer = {
   initial: {
     opacity: 1,
   },
-  animate: {
+  animate: { 
     opacity: 0,
     transition: {
       duration: 0.3,
