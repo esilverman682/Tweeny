@@ -3,52 +3,9 @@ import { motion } from "framer-motion";
 import React from "react";
 import dynamic from "next/dynamic";
 import useInView from "react-cool-inview";
-
 import Hero from "../components/Hero";
-{{/*
-  import HeroRound from "../components/HeroRound"
-  import HeroFull from "../components/HeroFull"
-  import HeroHalf from "../components/HeroHalf"
-  import HeroGradientText from "../components/HeroGradientText"
-  import HeroThreeImages from "../components/HeroThreeImages"
-  import Cta from "../components/Cta"
-  import CtaTwo from "../components/CtaTwo"
-  import HeroFullNoButton from "../components/HeroFullNoButton"
-  import HeroFullThin from "../components/HeroFullThin"
-  import HeroHalfTwo from "../components/HeroHalfTwo"
-  import TitleCards from "../components/TitleCards"
-  import CardImage from "../components/CardImage"
-  import Form from "../components/Form"
-  import TitleCardsTwo from "../components/TitleCardsTwo"
-  import Guardians from "../components/Guardians"
-  import ImageReveal from '../components/ImageReveal'
-  import FooterImage from '../components/FooterImage'
-  import FooterIcons from '../components/FooterIcons'
-  import FooterGradient from '../components/FooterGradient'
-  import FooterForm from '../components/FooterForm'
-  */
-}}
-const HeroRound = dynamic(() => import("../components/HeroRound"));
-const HeroFull = dynamic(() => import("../components/HeroFull"));
-const HeroHalf = dynamic(() => import("../components/HeroHalf"));
-const HeroGradientText = dynamic(() => import("../components/HeroGradientText"));
-const HeroThreeImages = dynamic(() => import("../components/HeroThreeImages"));
 const Cta = dynamic(() => import("../components/Cta"));
-const CtaTwo = dynamic(() => import("../components/CtaTwo"));
-const HeroFullNoButton = dynamic(() => import("../components/HeroFullNoButton"));
-const HeroFullThin = dynamic(() => import("../components/HeroFullThin"));
-const HeroHalfTwo = dynamic(() => import("../components/HeroHalfTwo"));
-const TitleCards = dynamic(() => import("../components/TitleCards"));
-const CardImage = dynamic(() => import("../components/CardImage"));
-const Form = dynamic(() => import("../components/Form"));
-const TitleCardsTwo = dynamic(() => import("../components/TitleCardsTwo"));
-const Guardians = dynamic(() => import("../components/Guardians"));
-const ImageReveal = dynamic(() => import("../components/ImageReveal"));
-const FooterImage = dynamic(() => import("../components/FooterImage"));
-const FooterIcons = dynamic(() => import("../components/FooterIcons"));
-const FooterGradient = dynamic(() => import("../components/FooterGradient"));
 const FooterForm = dynamic(() => import("../components/FooterForm"));
- 
  
 {/*TAILWIND REFERENCE LINK : https://tailwindui.com/components/marketing/elements/headers */}
 const productsDb = [
@@ -160,8 +117,6 @@ export default function IndexPage({ isFirstMount }) {
       {isFirstMount && <InitialTransition />}
  
     <Hero></Hero>
-  <ImageReveal></ImageReveal>
- 
 
       <motion.div
         initial="initial"
