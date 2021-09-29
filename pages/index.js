@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import React from "react";
 import dynamic from "next/dynamic";
 import useInView from "react-cool-inview";
-import Hero from "../components/Hero";
+//import Hero from "../components/Hero";
+const Hero = dynamic(() => import("../components/Hero"));
 const Cta = dynamic(() => import("../components/Cta"));
 const FooterForm = dynamic(() => import("../components/FooterForm"));
  
@@ -115,8 +116,11 @@ export default function IndexPage({ isFirstMount }) {
     <motion.section exit={{ opacity: 0 }}>
 
       {isFirstMount && <InitialTransition />}
- 
-    <Hero></Hero>
+      <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <Hero />}
+    </div>
+  
 
       <motion.div
         initial="initial"
