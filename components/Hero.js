@@ -119,7 +119,7 @@ export default function Hero() {
 
           <main className="mt-10 mx-auto max-w-5xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
-            <div className="text-left text-5xl font-extrabold leading-none tracking-tight">
+            <div className=" text-5xl font-extrabold leading-none tracking-tight">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">
                 Hello world
               </span>
@@ -171,7 +171,7 @@ export default function Hero() {
           </main>
         </div>
       </div>
-      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+      <div className="lg:absolute h-screen	lg:inset-y-0 lg:right-0 lg:w-1/2" >
       <Image       
         className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
         src="/bruce-mars-FWVMhUa_wbY-unsplash.webp" 
