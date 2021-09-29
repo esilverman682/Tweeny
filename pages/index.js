@@ -116,10 +116,7 @@ export default function IndexPage({ isFirstMount }) {
     <motion.section exit={{ opacity: 0 }}>
 
       {isFirstMount && <InitialTransition />}
-      <div ref={observe}>
-      {/* comments will load when inView is true */}
-      {inView && <Hero />}
-    </div>
+
   
 
       <motion.div
@@ -129,7 +126,7 @@ export default function IndexPage({ isFirstMount }) {
         className="space-y-12"
       >
 
-
+<Hero></Hero>
         <motion.section variants={products} className="text-gray-700 body-font">
           <div className="container px-5 pt-12 mx-auto">
             <div className="flex flex-wrap -m-4">
@@ -140,7 +137,7 @@ export default function IndexPage({ isFirstMount }) {
 
        <motion.h1 variants={title} className="text-6xl font-black text-center  ">
           Welcome to tailstore!
-        </motion.h1>
+        </motion.h1> 
     <div ref={observe}>
       {/* comments will load when inView is true */}
       {inView && <Cta />}
