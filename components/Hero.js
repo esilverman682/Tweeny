@@ -3,6 +3,9 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import React from 'react'
+import Link from 'next/dist/client/link'
+import Image from 'next/image'
+
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Contact', href: '/contact' },
@@ -22,6 +25,7 @@ export default function Hero() {
             preserveAspectRatio="none"
             aria-hidden="true"
           >
+
             <polygon points="50,0 100,0 50,100 0,100" />
           </svg>
 
@@ -115,7 +119,7 @@ export default function Hero() {
 
           <main className="mt-10 mx-auto max-w-5xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
-            <div className=" text-5xl font-extrabold leading-none tracking-tight">
+            <div className="text-left text-5xl font-extrabold leading-none tracking-tight">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">
                 Hello world
               </span>
@@ -124,6 +128,23 @@ export default function Hero() {
                 <span className="block xl:inline">Data to enrich your</span>{' '}
                 <span className="block  xl:inline bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-yellow-500">online business</span>
               </h1>
+              <Link href="/">
+          <a className="flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              className="w-10 h-10 p-2 text-white bg-red-500 rounded-full"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span className="ml-3 text-xl">tailstore</span>
+          </a>
+        </Link>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                 Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
                 fugiat veniam occaecat fugiat aliqua.
@@ -151,10 +172,12 @@ export default function Hero() {
         </div>
       </div>
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <img
-          className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-          alt=""
+      <Image       
+        className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+        src="/bruce-mars-FWVMhUa_wbY-unsplash.webp" 
+        layout='fill'
+        alt="user profile image"  
+               //   src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
         />
       </div>
     </div>
