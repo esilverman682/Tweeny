@@ -2,12 +2,20 @@ import React from "react";
 import Link from "next/link";
  
 import { useRouter } from "next/router";
+import useInView from "react-cool-inview";
 
 const Layout = ({ children }) => {
+  const { observe, inView } = useInView({
+    onEnter: ({ unobserve }) => unobserve(), // only run once
+  });
+
   return (
     <div className="flex flex-col min-h-screen">
- 
-     <Header />
+       <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <Header />}
+    </div>
+   
   
     
       <main className="flex-1">{children}</main>
