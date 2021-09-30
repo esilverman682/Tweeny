@@ -48,24 +48,43 @@ const Header = () => {
           </a>
         </Link>
         <nav className="flex flex-wrap items-center justify-center space-x-4 text-base md:ml-auto">
-          <Link href="/">
-            <a
-              className={`hover:text-gray-900 ${
-                asPath === "/" ? "font-black text-black" : ""
-              }`}
-            >
-              Store
-            </a>
-          </Link>
-          <Link href="/contact">
+ 
+          <Link href="/problems-we-solve">
             <a
               className={
-                asPath === "/contact"
+                asPath === "/problems-we-solve"
                   ? "font-black text-black"
                   : "hover:text-gray-900"
               }
             >
-              Contact Us
+              Problems We Solve
+            </a>
+          </Link>
+          <Link href="/products-we-offer">
+            <a
+              className={`hover:text-gray-900 ${
+                asPath === "/products-we-offer" ? "font-black text-black" : ""
+              }`}
+            >
+               Products We Offer
+            </a>
+          </Link>
+          <Link href="/partner-with-us">
+            <a
+              className={`hover:text-gray-900 ${
+                asPath === "/partner-with-us" ? "font-black text-black" : ""
+              }`}
+            >
+               Partner With Us
+            </a>
+          </Link>
+          <Link href="/blog">
+            <a
+              className={`hover:text-gray-900 ${
+                asPath === "/blog" ? "font-black text-black" : ""
+              }`}
+            >
+               Blog
             </a>
           </Link>
         </nav>

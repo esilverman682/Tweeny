@@ -1,54 +1,78 @@
-import React from "react";
-import { motion } from "framer-motion";
 
+import { motion } from "framer-motion";
+import React from "react";
+import dynamic from "next/dynamic";
+import useInView from "react-cool-inview";
+//import Hero from "../components/Hero";
+const Hero = dynamic(() => import("../components/Hero"));
+const Cta = dynamic(() => import("../components/Cta"));
+const FooterForm = dynamic(() => import("../components/FooterForm"));
+ 
+{/*TAILWIND REFERENCE LINK : https://tailwindui.com/components/marketing/elements/headers */}
 const productsDb = [
   {
     name: "The Catalyzer",
     category: "CATEGORY",
     img: "https://dummyimage.com/420x260",
     price: 16.0,
+    width: "420",
+    height:"260" 
   },
   {
     name: "Shooting Stars",
     category: "CATEGORY",
     img: "https://dummyimage.com/420x260",
     price: 21.15,
+    width: "420",
+    height:"260"
   },
   {
     name: "Neptune",
     category: "CATEGORY",
     img: "https://dummyimage.com/420x260",
     price: 12.0,
+    width: "420",
+    height:"260"
   },
   {
     name: "The 400 Blows",
     category: "CATEGORY",
     img: "https://dummyimage.com/420x260",
     price: 18.4,
+    width: "420",
+    height:"260"
   },
   {
     name: "The Catalyzer",
     category: "CATEGORY",
     img: "https://dummyimage.com/420x260",
     price: 16.0,
+    width: "420",
+    height:"260"
   },
   {
     name: "Shooting Stars",
     category: "CATEGORY",
     img: "https://dummyimage.com/420x260",
     price: 21.15,
+    width: "420",
+    height:"260"
   },
   {
     name: "Neptune",
     category: "CATEGORY",
     img: "https://dummyimage.com/420x260",
     price: 12.0,
+    width: "420",
+    height:"260"
   },
   {
     name: "The 400 Blows",
     category: "CATEGORY",
     img: "https://dummyimage.com/420x260",
     price: 18.4,
+    width: "420",
+    height:"260"
   },
 ];
 
@@ -83,9 +107,17 @@ const products = {
 };
 
 export default function IndexPage({ isFirstMount }) {
+
+  const { observe, inView } = useInView({
+    onEnter: ({ unobserve }) => unobserve(), // only run once
+  });
   return (
+    
     <motion.section exit={{ opacity: 0 }}>
+
       {isFirstMount && <InitialTransition />}
+
+  
 
       <motion.div
         initial="initial"
@@ -93,10 +125,8 @@ export default function IndexPage({ isFirstMount }) {
         variants={content(isFirstMount)}
         className="space-y-12"
       >
-        <motion.h1 variants={title} className="text-6xl font-black text-center">
-          Welcome to tailstore!
-        </motion.h1>
 
+<Hero></Hero>
         <motion.section variants={products} className="text-gray-700 body-font">
           <div className="container px-5 pt-12 mx-auto">
             <div className="flex flex-wrap -m-4">
@@ -104,6 +134,21 @@ export default function IndexPage({ isFirstMount }) {
                 <Product key={index} {...product} />
               ))}
             </div>
+
+       <motion.h1 variants={title} className="text-6xl font-black text-center  ">
+          Welcome to tailstore!
+        </motion.h1> 
+    <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <Cta />}
+    </div>
+ 
+    <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <FooterForm />}
+    </div>
+ 
+
           </div>
         </motion.section>
       </motion.div>
@@ -112,12 +157,15 @@ export default function IndexPage({ isFirstMount }) {
 }
 
 const Product = ({ img, category, name, price }) => (
+
   <div className="w-full p-4 lg:w-1/4 md:w-1/2">
     <a className="relative block h-48 overflow-hidden rounded">
       <img
         alt="ecommerce"
         className="block object-cover object-center w-full h-full"
         src={img}
+        width="420"
+        height="260"
       />
     </a>
     <div className="mt-4">
@@ -128,6 +176,7 @@ const Product = ({ img, category, name, price }) => (
       <p className="mt-1">${price.toFixed(2)}</p>
     </div>
   </div>
+
 );
 
 const blackBox = {
@@ -149,7 +198,7 @@ const textContainer = {
   initial: {
     opacity: 1,
   },
-  animate: {
+  animate: { 
     opacity: 0,
     transition: {
       duration: 0.3,
@@ -179,7 +228,7 @@ const InitialTransition = () => {
 
   return (
     <motion.div
-      className="absolute z-50 flex items-center justify-center w-full bg-black"
+      className="absolute z-50 flex items-center justify-center w-full bg-gradient-to-r from-green-900 via-black to-blue-800"
       initial="initial"
       animate="animate"
       variants={blackBox}
@@ -193,7 +242,7 @@ const InitialTransition = () => {
           id="pattern"
           patternUnits="userSpaceOnUse"
           width={750}
-          height={800}
+          height={1800}
           className="text-white"
         >
           <rect className="w-full h-full fill-current" />
@@ -203,13 +252,13 @@ const InitialTransition = () => {
           />
         </pattern>
         <text
-          className="text-4xl font-bold"
+          className="text-3xl font-bold "
           textAnchor="middle"
           x="50%"
           y="50%"
           style={{ fill: "url(#pattern)" }}
         >
-          tailstore
+          Small Business Loans
         </text>
       </motion.svg>
     </motion.div>
