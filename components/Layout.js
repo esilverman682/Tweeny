@@ -28,7 +28,7 @@ const Header = () => {
   const { asPath } = useRouter();
 
   return (
-    <header className="text-gray-700 body-font">
+    <header className="text-gray-blue body-font">
       <div className="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row">
         <Link href="/">
           <a className="flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0">
@@ -54,7 +54,7 @@ const Header = () => {
               className={
                 asPath === "/problems-we-solve"
                   ? "font-black text-black"
-                  : "hover:text-gray-900"
+                  : "hover:text-blue-900"
               }
             >
               Problems We Solve
@@ -62,7 +62,7 @@ const Header = () => {
           </Link>
           <Link href="/products-we-offer">
             <a
-              className={`hover:text-gray-900 ${
+              className={`hover:text-blue-900 ${
                 asPath === "/products-we-offer" ? "font-black text-black" : ""
               }`}
             >
@@ -71,7 +71,7 @@ const Header = () => {
           </Link>
           <Link href="/partner-with-us">
             <a
-              className={`hover:text-gray-900 ${
+              className={`hover:text-blue-900 ${
                 asPath === "/partner-with-us" ? "font-black text-black" : ""
               }`}
             >
@@ -80,7 +80,7 @@ const Header = () => {
           </Link>
           <Link href="/blog">
             <a
-              className={`hover:text-gray-900 ${
+              className={`hover:text-blue-900 ${
                 asPath === "/blog" ? "font-black text-black" : ""
               }`}
             >
@@ -88,7 +88,7 @@ const Header = () => {
             </a>
           </Link>
 
-          <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+          <div className="mt-0 sm:mt-0 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
                   <a
                     href="#"
