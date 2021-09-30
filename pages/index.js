@@ -130,9 +130,9 @@ export default function IndexPage({ isFirstMount }) {
         <motion.section variants={products} className="text-gray-700 body-font">
           <div className="container px-5 pt-12 mx-auto">
             <div className="flex flex-wrap -m-4">
-              {productsDb.map((product, index) => (
+        {/*      {productsDb.map((product, index) => (
                 <Product key={index} {...product} />
-              ))}
+        ))}*/}
             </div>
 
        <motion.h1 variants={title} className="text-6xl font-black text-center  ">
