@@ -149,12 +149,12 @@ export default function IndexPage({ isFirstMount }) {
         </div>
       </main>
       </div>    </div>   
-      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2  sm:h-90  "      style={{
-        position: "absolute",
-        maxHeight: "1200px",
+      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2  sm:h-90  "       >
+            <Image       style={{
+        position: "relative",
+        maxHeight: "2200px",
         maxWidth: "1200px",
-      }} >
-            <Image       
+      }}
               className="h-56 w-full object-cover md:h-96 lg:w-full lg:h-3 sm:h-full"
               src="/bruce-mars-FWVMhUa_wbY-unsplash.webp" 
               layout='fill'
