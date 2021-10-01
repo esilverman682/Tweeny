@@ -47,7 +47,7 @@ const FooterForm = () => {
                 type="email"
                 id="email"
                 placeholder="john@doe.com"
-                className="block w-full h-16 pl-4 pr-16 border-gray-200 rounded-lg sm:text-sm"
+                className="block w-full h-16 pl-4 pr-16 border-gray-400 rounded-lg sm:text-sm"
               />
   
               <button
