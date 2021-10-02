@@ -3,8 +3,8 @@
   module.exports = ({
     
     images: {
-      domains: ['assets.localhost:3000'],
-      disableStaticImages: true
+    domains: ['assets.localhost:3000'],
+     disableStaticImages: true
     },
     devIndicators: {
       autoPrerender: false,

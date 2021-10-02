@@ -32,11 +32,11 @@ const inputs = {
 
 const FooterForm = () => {
   return (
-    <footer className="bg-gray-50">
+    <footer className="bg-gradient-to-r from-blue-800 via-black to-pink-800">
     <div className="max-w-screen-xl px-4 py-16 mx-auto space-y-12 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <div className="lg:order-last">
-          <p className="font-medium">
+          <p className="text-gray-600 font-medium">
             Newsletter
           </p>
   
@@ -114,7 +114,7 @@ const FooterForm = () => {
   
         <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="font-medium">
+            <p className="text-gray-600 font-medium">
               Company
             </p>
   
@@ -127,7 +127,7 @@ const FooterForm = () => {
           </div>
   
           <div>
-            <p className="font-medium">
+            <p className="text-gray-600 font-medium">
               Services
             </p>
   
@@ -141,7 +141,7 @@ const FooterForm = () => {
           </div>
   
           <div>
-            <p className="font-medium">
+            <p className="text-gray-600 font-medium">
               Helpful Links
             </p>
   
@@ -153,7 +153,7 @@ const FooterForm = () => {
           </div>
   
           <div>
-            <p className="font-medium">
+            <p className="text-gray-600 font-medium">
               Legal
             </p>
   
