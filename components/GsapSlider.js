@@ -7,7 +7,7 @@ import Draggable from 'gsap/dist/Draggable';
  export default function Some() {
  
   useEffect(() => {
- gsap.registerPlugin(Draggable);
+ gsap.registerPlugin(Draggable)
     gsap.registerPlugin(ScrollTrigger);
     console.clear();
     const colorArray = [

@@ -1,12 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from 'next/image'
- 
- 
+import Link from "next/dist/client/link";
+import GsapSlider from "../components/GsapSlider"
 import ThreeCard from "../components/ThreeCard"
 import New from "../components/new";
 import { delay } from "lodash";
-import Imagez from './Imagez'
+import { useState } from "react";
+ 
+ 
 const productsDb = [
   {
     name: "The Catalyzer",
@@ -76,6 +78,18 @@ const title = {
   },
 };
 
+const imager = {
+  initial: { y: -0, opacity: 0 },
+  animate: {
+    y: -20,
+    opacity: 1,
+    transition: {
+      duration: 2.9,
+      ease: [0.1, -0.05, 0.01, 0.99],
+    },
+  },
+};
+
 const products = {
   initial: { y: -20, opacity: 0 },
   animate: {
@@ -90,26 +104,18 @@ const products = {
 
 export default function IndexPage({ isFirstMount }) {
 
-  const containerz = {
-    hidden: { opacity: 0, delay: 5 },
-    show: {
-      opacity: 1,
-      transition: {
-        delayChildren: 4.5
-      }
+  const [imageLoading, setImageLoading] = useState(true);
+  const [pulsing, setPulsing] = useState(true);
 
-    }
-  }
-  
-  const itemz = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1 }
-  }
+  const imageLoaded = () => {
+    setImageLoading(false);
+    setTimeout(() => setPulsing(false), 600);
+  };
 
   return (
     <motion.section exit={{ opacity: 0 }}>
-      {isFirstMount && <InitialTransition />}
- 
+   
+
 <div className="relative bg-white overflow-hidden">
 <div className="max-w-6xl mx-auto">
   <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
@@ -174,18 +180,20 @@ export default function IndexPage({ isFirstMount }) {
 
 
  
-      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2  sm:h-90  "       >
+ <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2  sm:h-90  "       >
       <motion.div
    variants={containerz}
    initial="hidden"
    animate="show"
-   
  
-      >    <Image       
+      >   
+
+<motion.div variants={imager} className="text-6xl font-black text-left text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">      
+       <Image       
         style={{
           position: "relative",
           maxHeight: "2200px",
-          maxWidth: "1200px",
+          maxWidth: "1200px"
         }}
         placeholder="blur"
         blurDataURL
@@ -195,8 +203,24 @@ export default function IndexPage({ isFirstMount }) {
           alt="user profile image"  
           //src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
         />
+
+
+</motion.div>
+
                </motion.div>
-          </div>    
+ 
+
+ 
+  <style
+    dangerouslySetInnerHTML={{
+        __html: `
+ 
+       
+        
+    `
+    }}
+    />    
+</div>    
  
         
         
@@ -243,6 +267,16 @@ const blackBox = {
   },
 };
 
+const containerz = {
+  hidden: { opacity: 0, delay: 5 },
+  show: {
+    opacity: 1,
+    transition: {
+      delayChildren: 4.5
+    }
+
+  }
+}
 const textContainer = {
   initial: {
     opacity: 1,
@@ -270,50 +304,4 @@ const text = {
   },
 };
 
-const InitialTransition = () => {
-  // Scroll user to top to avoid showing the footer
-  React.useState(() => {
-    typeof windows !== "undefined" && window.scrollTo(0, 0);
-  }, []);
-
-  return (
-    <motion.div viewBox="10 10 1000 1000"
-    className="absolute z-50 flex items-center justify-center w-full bg-gradient-to-r from-green-900 via-black to-blue-800"
-      initial="initial"
-      animate="animate"
-      variants={blackBox}
-      onAnimationStart={() => document.body.classList.add("overflow-hidden")}
-      onAnimationComplete={() =>
-        document.body.classList.remove("overflow-hidden")
-      }
-    >
-  
-      <motion.svg variants={textContainer} className="absolute z-50 flex " >
-        <pattern 
-          id="pattern"
-          patternUnits="userSpaceOnUse"
-          width={750}
-          height={800}
-          className="text-white"
-        >
-          <rect className="w-full h-full fill-current" viewBox="0 0 100 300" />
-          <motion.rect 
-            viewBox="0 0 100 300" 
-            variants={text}
-            className="w-full h-full text-gray-600 fill-current"
-          />
-        </pattern>
-        <text   
-          className="text-3xl font-bold"
-          textAnchor="middle"
-          x="50%"
-          y="50%"
-          style={{ fill: "url(#pattern)" }}
-        >
-          Loans For Everyday Business
-        </text>
-        
-      </motion.svg>
-    </motion.div>
-  );
-};
+ 
