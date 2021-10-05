@@ -5,7 +5,7 @@ import Image from 'next/image'
 import dynamic from "next/dynamic";
 import useInView from "react-cool-inview";
 
-const Hero = dynamic(() => import("../components/ThreeCard"));
+const ThreeCard = dynamic(() => import("../components/ThreeCard"));
 const productsDb = [
   {
     name: "The Catalyzer",
