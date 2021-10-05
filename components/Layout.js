@@ -93,9 +93,9 @@ const Header = () => {
                 <div className="rounded-md shadow">
                   <a
                     href="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white   bg-gradient-to-r from-green-400 to-blue-500 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white   bg-gradient-to-r from-green-400 to-blue-500 hover:bg-indigo-700 md:py-2 md:text-lg md:px-10"
                   >
-                    Get started
+                   APPLY NOW
                   </a>
                 </div>
  

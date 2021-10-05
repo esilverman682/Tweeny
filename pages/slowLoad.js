@@ -79,7 +79,7 @@ const title = {
 };
 
 const imager = {
-  initial: { y: -0, opacity: 0 },
+  initial: { y: 0, opacity: 0 },
   animate: {
     y: -20,
     opacity: 1,

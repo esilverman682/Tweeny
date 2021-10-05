@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
  
 import React from "react";
  import New from '../components/new'
+ import HeroHalfTwo from '../components/HeroHalfTwo'
+ 
 const content = {
   animate: {
     transition: { staggerChildren: 0.1 },
@@ -39,7 +41,7 @@ const ContactPage = () => {
       exit={{ opacity: 0 }}
       className="relative text-gray-700 body-font"
     >
-
+ 
       <motion.div
         variants={content}
         animate="animate"
