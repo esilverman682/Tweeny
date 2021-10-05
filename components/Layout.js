@@ -13,16 +13,11 @@ const Layout = ({ children }) => {
 
   return (
     <div className="flex flex-col min-h-screen">
-    
-  <Header></Header>
- 
-    <main className="flex-1">{children}</main>
-    <div ref={observe}>
-      {/* comments will load when inView is true */}
-      {inView && <FooterForm />}
-    </div>
-     
- 
+      <Header></Header>
+      <div ref={observe}>
+        {/* comments will load when inView is true */}
+        {inView && <FooterForm />}
+      </div>
     </div>
   );
 };
@@ -109,14 +104,7 @@ const Header = () => {
   );
 };
 
-const Footer = () => (
 
-  
- <FooterForm></FooterForm> 
- 
- 
-
-);
 
 const Links = ({ names }) => (
   <nav className="mb-10 list-none">
