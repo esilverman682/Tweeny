@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
  
 import { useRouter } from "next/router";
+import dynamic from "next/dynamic";
 import useInView from "react-cool-inview";
 import FooterForm from "./FooterForm";
 
@@ -108,8 +109,11 @@ const Header = () => {
 };
 
 const Footer = () => (
-
-  <FooterForm></FooterForm>
+  <div ref={observe}>
+  {/* comments will load when inView is true */}
+  {inView && <FooterForm />}
+</div>
+ 
 
 );
 
