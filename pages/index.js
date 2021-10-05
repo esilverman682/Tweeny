@@ -184,6 +184,7 @@ export default function IndexPage({ isFirstMount }) {
       >    
       <Image       
         placeholder="blur"
+        blurDataURL
           className="h-56 w-full object-cover md:h-96 lg:w-full lg:h-3 sm:h-full"
           src="/bruce-mars-FWVMhUa_wbY-unsplash.webp" 
           layout='responsive'
