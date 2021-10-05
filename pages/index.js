@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from 'next/image'
-//import ThreeCard from "../components/ThreeCard"
 import dynamic from "next/dynamic";
 import useInView from "react-cool-inview";
 
@@ -182,19 +181,12 @@ export default function IndexPage({ isFirstMount }) {
    variants={containerz}
    initial="hidden"
    animate="show"
-   
- 
-      >    <Image       
-        style={{
-          position: "relative",
-          maxHeight: "2200px",
-          maxWidth: "1200px",
-        }}
+      >    
+      <Image       
         placeholder="blur"
-        blurDataURL
           className="h-56 w-full object-cover md:h-96 lg:w-full lg:h-3 sm:h-full"
           src="/bruce-mars-FWVMhUa_wbY-unsplash.webp" 
-        //  layout='fill'
+          layout='responsive'
         width="1200"
         height="600"  
         alt="user profile image"  
@@ -285,6 +277,7 @@ const InitialTransition = () => {
   }, []);
 
   return (
+//    <motion.div viewBox="10 10 1000 1000"
     <motion.div viewBox="10 10 1000 1000"
     className="absolute z-50 flex items-center justify-center w-full bg-gradient-to-r from-green-900 via-black to-blue-800"
       initial="initial"
