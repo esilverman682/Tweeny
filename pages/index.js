@@ -279,7 +279,7 @@ const InitialTransition = () => {
 
   return (
 //    <motion.div viewBox="10 10 1000 1000"
-    <motion.div viewBox="10 10 1000 1000"
+    <motion.div  
     className="absolute z-50 flex items-center justify-center w-full bg-gradient-to-r from-green-900 via-black to-blue-800"
       initial="initial"
       animate="animate"
