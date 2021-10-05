@@ -19,12 +19,12 @@ export default function ThreeCard() {
         src="/nordwood-themes-kRNZiGKtz48-unsplash.webp" 
         layout="responsive"
         width="1920"
-        height="600"  
+        height="1280"  
         alt="user profile image"  
         //src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
       />
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">Mountain</div>
+        <div className="font-bold text-xl mb-2">Mountains</div>
         <p className="text-gray-700 text-base">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
         </p>
@@ -42,7 +42,7 @@ export default function ThreeCard() {
         src="/adeolu-eletu-unRkg2jH1j0-unsplash.webp" 
         layout="responsive"
         width="1920"
-        height="600"  
+        height="1280"  
         alt="user profile image"  
         //src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
       />
@@ -66,7 +66,7 @@ export default function ThreeCard() {
         src="/keren-levand-pm-e64IOYHM-unsplash.webp" 
         layout="responsive"
         width="1920"
-        height="600"  
+        height="1280"  
         alt="user profile image"  
         //src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
       />
