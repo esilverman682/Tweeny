@@ -17,7 +17,7 @@ export default function ThreeCard() {
     <Image       
         className="h-full w-full object-cover md:w-full lg:w-full lg:w-full sm:w-full"
         src="/nordwood-themes-kRNZiGKtz48-unsplash.webp" 
-       // layout="fill"
+        layout="responsive"
         width="1200"
         height="600"  
         alt="user profile image"  
@@ -40,7 +40,7 @@ export default function ThreeCard() {
       <Image       
         className="h-full w-full object-cover md:w-full lg:w-full lg:w-full sm:w-full"
         src="/adeolu-eletu-unRkg2jH1j0-unsplash.webp" 
-      //  layout="fill"
+        layout="responsive"
         width="1200"
         height="600"  
         alt="user profile image"  
@@ -64,7 +64,7 @@ export default function ThreeCard() {
     <Image       
         className="h-full w-full object-cover md:w-full lg:w-full lg:w-full sm:w-full"
         src="/keren-levand-pm-e64IOYHM-unsplash.webp" 
-      //  layout="fill"
+        layout="responsive"
         width="1200"
         height="600"  
         alt="user profile image"  
