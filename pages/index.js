@@ -1,12 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from 'next/image'
- 
- 
-import ThreeCard from "../components/ThreeCard"
-import New from "../components/new";
-import { delay } from "lodash";
-import Imagez from './Imagez'
+//import ThreeCard from "../components/ThreeCard"
+import dynamic from "next/dynamic";
+import useInView from "react-cool-inview";
+
+const Hero = dynamic(() => import("../components/ThreeCard"));
 const productsDb = [
   {
     name: "The Catalyzer",
@@ -89,6 +88,10 @@ const products = {
 };
 
 export default function IndexPage({ isFirstMount }) {
+  const { observe, inView } = useInView({
+    onEnter: ({ unobserve }) => unobserve(), // only run once
+  });
+
 
   const containerz = {
     hidden: { opacity: 0, delay: 5 },
@@ -201,8 +204,11 @@ export default function IndexPage({ isFirstMount }) {
         
         
         </div>
-   
-<ThreeCard></ThreeCard>
+        <div ref={observe}>
+      {/* comments will load when inView is true */}
+      {inView && <ThreeCard />}
+    </div>
+ 
 
     </motion.section>
 
