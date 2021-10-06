@@ -176,8 +176,11 @@ export default function IndexPage({ isFirstMount }) {
               className="h-56 w-full object-cover md:h-96 lg:w-full lg:h-3 sm:h-full"
               src="/bruce-mars-FWVMhUa_wbY-unsplash.webp" 
               layout='responsive'
-              width="1920"
-              height="1280"  
+              width="100"
+              height="100" 
+        
+          quality={100}
+                   sizes={[320, 520]}
               alt="user profile image"  
               //src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
             />
