@@ -20,9 +20,8 @@ export default function ThreeCard() {
         layout="responsive"
         width="100"
       height="100" 
-
-  quality={100}
-           sizes={[320, 520]}
+      placeholder="blur"
+      blurDataURL
   alt="user profile image"  
         //src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
       />
@@ -46,9 +45,8 @@ export default function ThreeCard() {
         layout="responsive"
         width="100"
       height="100" 
-
-  quality={100}
-           sizes={[320, 520]} 
+      placeholder="blur"
+      blurDataURL
         alt="user profile image"  
         //src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
       />
@@ -73,9 +71,8 @@ export default function ThreeCard() {
         layout="responsive"
         width="100"
       height="100" 
-
-  quality={100}
-           sizes={[320, 520]}
+      placeholder="blur"
+      blurDataURL
         alt="user profile image"  
         //src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
       />
