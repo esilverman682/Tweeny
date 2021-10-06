@@ -16,7 +16,7 @@ export default function ThreeCard() {
     <div className="rounded overflow-hidden shadow-lg">
     <Image       
         className="h-full w-full object-cover md:w-full lg:w-full lg:w-full sm:w-full"
-        src="/nordwood-themes-kRNZiGKtz48-unsplash.webp" 
+        src="/bruce-mars-FWVMhUa_wbY-unsplashes.webp" 
         layout="responsive"
         width="100"
       height="100" 
@@ -41,7 +41,7 @@ export default function ThreeCard() {
     <div className="rounded overflow-hidden shadow-lg">
       <Image       
         className="h-full w-full object-cover md:w-full lg:w-full lg:w-full sm:w-full"
-        src="/adeolu-eletu-unRkg2jH1j0-unsplash.webp" 
+        src="/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp" 
         layout="responsive"
         width="100"
       height="100" 
@@ -67,7 +67,7 @@ export default function ThreeCard() {
     <div className="rounded overflow-hidden shadow-lg">
     <Image       
         className="h-full w-full object-cover md:w-full lg:w-full lg:w-full sm:w-full"
-        src="/keren-levand-pm-e64IOYHM-unsplash.webp" 
+        src="/linkedin-sales-solutions-4nu1d0HYwAg-unsplash.webp" 
         layout="responsive"
         width="100"
       height="100" 
