@@ -164,11 +164,12 @@ export default function IndexPage({ isFirstMount }) {
             </main>
           </div>    
         </div>   
-        <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2  sm:h-90  "       >
+        <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2  sm:h-90">
           <motion.div
             variants={containerz}
             initial="hidden"
             animate="show"
+  
           >    
             <Image       
               placeholder="blur"
@@ -176,8 +177,8 @@ export default function IndexPage({ isFirstMount }) {
               className="h-56 w-full object-cover md:h-96 lg:w-full lg:h-3 sm:h-full"
               src="/bruce-mars-FWVMhUa_wbY-unsplash.webp" 
               layout='responsive'
-              width="100"
-              height="100" 
+              width="1000"
+              height="600" 
         
    
  
