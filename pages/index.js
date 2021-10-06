@@ -133,7 +133,7 @@ export default function IndexPage({ isFirstMount }) {
                       Hello world
                     </span>
                   </div>   
-                  <motion.h1 variants={title} className="text-6xl font-black text-left text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                  <motion.h1 variants={title} className="text-6xl font-black text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                     <span className="block xl:inline">Data to enrich your</span>{' '}
                     <span className="block  xl:inline bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-yellow-500">everyday business</span>
                   </motion.h1>

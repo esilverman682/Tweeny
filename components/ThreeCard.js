@@ -3,7 +3,7 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import React from 'react'
-import Link from 'next/dist/client/link'
+ 
 import Image from 'next/image'
 
  
@@ -16,12 +16,11 @@ export default function ThreeCard() {
     <div className="rounded overflow-hidden shadow-lg">
     <Image       
         className="h-full w-full object-cover md:w-full lg:w-full lg:w-full sm:w-full"
-        src="/bruce-mars-FWVMhUa_wbY-unsplashes.webp" 
+        src="/keren-levand-pm-e64IOYHM-unsplash.webp" 
         layout="responsive"
-        width="100"
-      height="100" 
-      placeholder="blur"
-      blurDataURL
+        width="100%"
+        height="100%" 
+
   alt="user profile image"  
         //src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
       />
@@ -43,10 +42,9 @@ export default function ThreeCard() {
         className="h-full w-full object-cover md:w-full lg:w-full lg:w-full sm:w-full"
         src="/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp" 
         layout="responsive"
-        width="100"
-      height="100" 
-      placeholder="blur"
-      blurDataURL
+        width="100%"
+        height="100%" 
+ 
         alt="user profile image"  
         //src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
       />
@@ -69,10 +67,9 @@ export default function ThreeCard() {
         className="h-full w-full object-cover md:w-full lg:w-full lg:w-full sm:w-full"
         src="/linkedin-sales-solutions-4nu1d0HYwAg-unsplash.webp" 
         layout="responsive"
-        width="100"
-      height="100" 
-      placeholder="blur"
-      blurDataURL
+        width="100%"
+        height="100%" 
+   
         alt="user profile image"  
         //src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
       />
